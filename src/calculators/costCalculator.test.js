@@ -1,4 +1,4 @@
-import doCalculate from "./calculator";
+import doCalculate from "./costCalculator";
 test("empty test", () => {
   expect(true).toBe(true);
 });
