@@ -1,3 +1,3 @@
-export default (valueAsString) => {
-  return parseInt(valueAsString) * 0.5;
+export default (bagsOfCorn) => {
+  return bagsOfCorn > 0 ? bagsOfCorn * 0.5 - 0.25 : 0;
 };

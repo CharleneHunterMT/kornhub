@@ -26,7 +26,7 @@ class App extends React.Component {
             </div>
             <label>
               Total Bags of Corn
-              <input type="text" ref={this.input} />
+              <input type="number" ref={this.input} />
             </label>
             <label>Total Number of Geese</label>
             <div>
