@@ -1,3 +1,8 @@
-export default (bagsOfCorn) => {
-  return bagsOfCorn > 0 ? bagsOfCorn * 0.5 - 0.25 : 0;
+import tripCalculator from './tripCalculator'
+
+export default (geese, corn) => {
+  let numberOfTrips = tripCalculator(geese, corn);
+  console.log(numberOfTrips);
+
+  return numberOfTrips * 0.25;
 };

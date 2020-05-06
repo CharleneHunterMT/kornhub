@@ -8,6 +8,7 @@ class App extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.doCalculate = doCalculate;
     this.input = React.createRef();
+    this.geeseInput = React.createRef();
   }
 
   render() {
@@ -28,7 +29,9 @@ class App extends React.Component {
               Total Bags of Corn
               <input type="number" ref={this.input} />
             </label>
-            <label>Total Number of Geese</label>
+            <label>Total Number of Geese
+            <input type="number" ref={this.geeseInput} />
+            </label>
             <div>
               <input type="submit" value="Calculate" />
             </div>
@@ -38,7 +41,8 @@ class App extends React.Component {
     );
   }
   handleSubmit(event) {
-    alert("The total cost: £" + doCalculate(this.input.current.value));
+    console.log('geese: ' + this.geeseInput.current.value + ' corn: ' + this.input.current.value)
+    alert("The total cost: £" + doCalculate(this.geeseInput.current.value, this.input.current.value));
   }
 }
 
