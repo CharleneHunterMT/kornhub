@@ -1,10 +1,12 @@
 import React from "react";
 import "./App.css";
+import doCalculate from "./calculator";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.doCalculate = doCalculate;
     this.input = React.createRef();
   }
 
@@ -36,11 +38,7 @@ class App extends React.Component {
     );
   }
   handleSubmit(event) {
-    alert("The total cost: £" + this.doCalculate(this.input.current.value));
-  }
-
-  doCalculate(valueAsString) {
-    return parseInt(valueAsString) * 0.5;
+    alert("The total cost: £" + doCalculate(this.input.current.value));
   }
 }
 
