@@ -17,7 +17,6 @@ class App extends React.Component {
           <p>
             <code>kornhub</code>
           </p>
-
           <form onSubmit={this.handleSubmit}>
             <div>
               <label>Cost per ferry trip: £0.25</label>
@@ -29,6 +28,7 @@ class App extends React.Component {
               Total Bags of Corn
               <input type="text" ref={this.input} />
             </label>
+            <label>Total Number of Geese</label>
             <div>
               <input type="submit" value="Calculate" />
             </div>
