@@ -13,7 +13,6 @@ render() {
   return (
     <div className="App">
       <header className="App-header">
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <p>
           <code>kornhub</code>
         </p> 
@@ -39,7 +38,11 @@ render() {
   );
 }
  handleSubmit(event) {
-  alert('The total cost: £' + parseInt(this.input.current.value) * .50);
+  alert('The total cost: £' + this.doCalculate(this.input.current.value));
+}
+
+doCalculate(valueAsString){
+  return parseInt(valueAsString) * .5;
 }
 
 }
