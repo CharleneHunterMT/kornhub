@@ -17,26 +17,30 @@ test("given zero geese and one corn, the farmer is shown one route with one trip
 });
 
 test("given zero geese and two corn, the farmer is shown one route with three trips", () => {
-  expect(doTripCalculation(0, 2)).toEqual([["C", "", "C"]]);
+  expect(doTripCalculation(0, 2)).toEqual([["C", " ", "C"]]);
 });
 
 test("given zero corn and two geese, the farmer is shown one route with three trips", () => {
-  expect(doTripCalculation(2, 0)).toEqual([["G", "", "G"]]);
+  expect(doTripCalculation(2, 0)).toEqual([["G", " ", "G"]]);
 });
 
 test("given one goose and one corn, the farmer is shown one route with three trips", () => {
   expect(doTripCalculation(1, 1)).toEqual([
-    ["C", "", "G"],
-    ["G", "", "C"],
+    ["C", " ", "G"],
+    ["G", " ", "C"],
   ]);
 });
 
 test("given one goose and two corn, the farmer is shown one route with seven trips", () => {
-  expect(doTripCalculation(1, 2)).toEqual([["G", "", "C", "G", "C", "", "G"]]);
+  expect(doTripCalculation(1, 2)).toEqual([
+    ["G", " ", "C", "G", "C", " ", "G"],
+  ]);
 });
 
 test("given two goose and one corn, the farmer is shown one route seven trips", () => {
-  expect(doTripCalculation(2, 1)).toEqual([["C", "", "G", "C", "G", "", "C"]]);
+  expect(doTripCalculation(2, 1)).toEqual([
+    ["C", " ", "G", "C", "G", " ", "C"],
+  ]);
 });
 
 test("given one fox, the farmer is shown one route with one trip", () => {
@@ -44,7 +48,7 @@ test("given one fox, the farmer is shown one route with one trip", () => {
 });
 
 test("given several foxes, the farmer is shown one route with several fox trips", () => {
-  expect(doTripCalculation(0, 0, 3)).toEqual([["F", "", "F", "", "F"]]);
+  expect(doTripCalculation(0, 0, 3)).toEqual([["F", " ", "F", " ", "F"]]);
 });
 
 test("given 2 foxes, two geese, 2 corn the farmer is shown no routes", () => {
