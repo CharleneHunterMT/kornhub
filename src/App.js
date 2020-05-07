@@ -143,8 +143,8 @@ export default function App() {
                     intFox
                   );
                   console.log(costResult, routeResult);
-                  setCostRows((costRows) => [...costRows, costResult]);
-                  setRouteRows((routeRows) => [...routeRows, routeResult]);
+                  setCostRows(() => [costResult]);
+                  setRouteRows(() => [routeResult]);
                 }
               }}
             >
@@ -161,7 +161,8 @@ export default function App() {
           <Table data={costRows} cost />
         </div>
         <div className={classes.paper}>
-          <Table data={routeRows} route />
+          
+          
         </div>
       </Grid>
     </Grid>

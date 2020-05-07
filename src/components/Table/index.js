@@ -10,6 +10,8 @@ import keyGenerator from "../../helpers/keyGenerator";
 export default (props) => {
   let tableHead = "";
   let tableBody = [];
+
+  console.log(props.data);
   if (props.cost) {
     tableHead = (
       <TableHead>

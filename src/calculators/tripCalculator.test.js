@@ -46,3 +46,15 @@ test("given one fox, the farmer is shown one route with one trip", () => {
 test("given several foxes, the farmer is shown one route with several fox trips", () => {
   expect(doTripCalculation(0, 0, 3)).toEqual([["F", "", "F", "", "F"]]);
 });
+
+test("given 2 foxes, two geese, 2 corn the farmer is shown no routes", () => {
+  expect(doTripCalculation(2, 2, 2)).toEqual([]);
+});
+
+test("given 200 foxes, 1 geese, 1 corn the farmer is shown no routes", () => {
+  expect(doTripCalculation(1, 1, 200)).toEqual([]);
+});
+
+test("given 200 foxes, 1 geese, 1 corn the farmer is shown no routes", () => {
+  expect(doTripCalculation(1, 1, 200)).toEqual([]);
+});

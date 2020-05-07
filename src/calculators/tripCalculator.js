@@ -8,12 +8,12 @@ let oneCornOneGeese = ["C", "", "G"];
 export default (geese = 0, corn = 0, fox = 0) => {
   let totalArray = [];
 
-  if (geese === 1 && corn === 1) {
+  if (geese === 1 && corn === 1 && fox === 0) {
     totalArray.push(oneCornOneGeese);
     totalArray.push(oneGeeseOneCorn);
   }
 
-  if (geese === 1 && corn === 2) {
+  if (geese === 1 && corn === 2 && fox === 0) {
     totalArray.push(twoCornOneGoose);
   }
 
