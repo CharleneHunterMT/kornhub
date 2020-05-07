@@ -1,7 +1,7 @@
 let twoCornOneGoose = ["G", "", "C", "G", "C", "", "G"];
 let twoGeeseOneCorn = ["C", "", "G", "C", "G", "", "C"];
-let oneGeeseOneCornOneFox1 = ["G", "", "F", "G", "C", "", "G"];
-let oneGeeseOneCornOneFox2 = ["G", "", "C", "G", "F", "", "G"];
+// let oneGeeseOneCornOneFox1 = ["G", "", "F", "G", "C", "", "G"];
+// let oneGeeseOneCornOneFox2 = ["G", "", "C", "G", "F", "", "G"];
 let oneGeeseOneCorn = ["G", "", "C"];
 let oneCornOneGeese = ["C", "", "G"];
 
