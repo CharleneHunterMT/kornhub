@@ -6,51 +6,38 @@ let oneGeeseOneCorn = ["G", "", "C"];
 let oneCornOneGeese = ["C", "", "G"];
 
 export default (geese, corn) => {
+  let totalArray = [];
 
-  if (!corn && !geese) {
-    return 0;
-  }
-  if (corn > 2 && geese > 2) {
-    return undefined;
-  }
   if (geese === 1 && corn === 1) {
-    let totalArray = [];
     totalArray.push(oneCornOneGeese);
     totalArray.push(oneGeeseOneCorn);
-    
-    return totalArray;
-  }
-  if (geese === 1 && corn === 2) {
-    let totalArray = [];
-    totalArray.push(twoCornOneGoose)
-    return totalArray;
-  }
-  if (geese === 2 && corn === 1) {
-    let totalArray = [];
-    totalArray.push(twoGeeseOneCorn)
-    return totalArray;
   }
 
-  if (!corn || corn === 0) {
-    let totalGeeseArray = [];
+  if (geese === 1 && corn === 2) {
+    totalArray.push(twoCornOneGoose);
+  }
+
+  if (geese === 2 && corn === 1) {
+    totalArray.push(twoGeeseOneCorn);
+  }
+
+  if ((!corn || corn === 0) && geese > 0) {
     let geeseArray = [];
     for (let i = 0; i < geese - 1; i++) {
       geeseArray.push("G", "");
     }
     geeseArray.push("G");
-    totalGeeseArray.push(geeseArray);
-    return totalGeeseArray;
+    totalArray.push(geeseArray);
   }
 
-  if (!geese || geese === 0) {
-    let totalCornArray = [];
+  if ((!geese || geese === 0) && corn > 0) {
     let cornArray = [];
     for (let i = 0; i < corn - 1; i++) {
       cornArray.push("C", "");
     }
     cornArray.push("C");
-    totalCornArray.push(cornArray);
-    return totalCornArray;
+    totalArray.push(cornArray);
   }
-  return 0;
+
+  return totalArray;
 };
