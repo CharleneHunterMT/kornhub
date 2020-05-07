@@ -22,8 +22,6 @@ export default (trip) => {
       ? " from the farm to the market."
       : " from the market to the farm.";
 
-    suffix = suffix + "\n";
-
     let concatenatedTripDescription = prefix + itemWeAreCarrying + suffix;
 
     result.push(concatenatedTripDescription);
