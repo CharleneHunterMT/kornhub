@@ -16,6 +16,7 @@ export default (props) => {
         <TableRow key={keyGenerator(5)}>
           <TableCell align="right">Geese</TableCell>
           <TableCell align="right">Corn</TableCell>
+          <TableCell align="right">Fox</TableCell>
           <TableCell align="right">Cost (£)</TableCell>
         </TableRow>
       </TableHead>
@@ -26,6 +27,7 @@ export default (props) => {
           <TableRow key={keyGenerator(5)}>
             <TableCell align="right">{row.geese}</TableCell>
             <TableCell align="right">{row.corn}</TableCell>
+            <TableCell align="right">{row.fox}</TableCell>
             <TableCell align="right">{row.price}</TableCell>
           </TableRow>
         ))}

@@ -51,8 +51,10 @@ export default function App() {
   const classes = useStyles();
   const [corn, setCorn] = useState(0);
   const [geese, setGeese] = useState(0);
+  const [fox, setFox] = useState(0);
   const [cornError, setCornError] = React.useState(false);
   const [geeseError, setGeeseError] = React.useState(false);
+  const [foxError, setFoxError] = React.useState(false);
   const [costRows, setCostRows] = React.useState([]);
   const [routeRows, setRouteRows] = React.useState([]);
   return (
@@ -102,6 +104,24 @@ export default function App() {
               error={cornError}
               InputProps={{ inputProps: { min: 0 } }}
             />
+            <TextField
+              variant="outlined"
+              margin="normal"
+              required
+              fullWidth
+              name="email"
+              label="Number of foxes"
+              type="number"
+              id="fox"
+              autoFocus
+              defaultValue={fox}
+              onChange={(e) => {
+                setFox(e.target.value);
+              }}
+              helperText="Please enter a valid number of foxes"
+              error={foxError}
+              InputProps={{ inputProps: { min: 0 } }}
+            />
             <Button
               type="submit"
               fullWidth
@@ -112,12 +132,15 @@ export default function App() {
                 e.preventDefault();
                 const intCorn = parseInt(corn);
                 const intGeese = parseInt(geese);
+                const intFox = parseInt(fox);
                 isNaN(intCorn) ? setCornError(true) : setCornError(false);
                 isNaN(intGeese) ? setGeeseError(true) : setGeeseError(false);
-                if (!(cornError || geeseError)) {
+                isNaN(intFox) ? setFoxError(true) : setFoxError(false);
+                if (!(cornError || geeseError || foxError)) {
                   let [costResult, routeResult] = mockCalculateJourney(
                     intGeese,
-                    intCorn
+                    intCorn,
+                    intFox
                   );
                   console.log(costResult, routeResult);
                   setCostRows((costRows) => [...costRows, costResult]);
