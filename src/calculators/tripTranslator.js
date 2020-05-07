@@ -28,7 +28,7 @@ export default (trip) => {
     result.push(concatenatedTripDescription);
   }
 
-  if (trip.length == 0) {
+  if (trip.length === 0) {
     result.push("No suitable routes found.");
   }
 
