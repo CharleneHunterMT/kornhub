@@ -1,6 +1,10 @@
 export default (trip) => {
   let result = [];
 
+  if (!trip) {
+    return result;
+  }
+
   let translationLookup = {};
   translationLookup["G"] = "goose";
   translationLookup["F"] = "fox";

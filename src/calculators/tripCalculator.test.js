@@ -4,8 +4,8 @@ test("testing framework is working", () => {
   expect(true).toBe(true);
 });
 
-test("given zero geese and zero corn, the farmer is shown no routes", () => {
-  expect(doTripCalculation(0, 0)).toEqual([]);
+test("given zero geese and zero corn and zero foxes, the farmer is shown no routes", () => {
+  expect(doTripCalculation(0, 0, 0)).toEqual([]);
 });
 
 test("given three geese and three corns, the farmer is shown no routes", () => {
