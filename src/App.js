@@ -9,9 +9,9 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import SpaIcon from "@material-ui/icons/Spa";
-// import calculateJourney from "./helpers/calculator";
 import mockCalculateJourney from "./calculators/mockCalculator";
 import Table from "./components/Table/index";
+import List from "./components/List/index";
 
 function Copyright() {
   return (
@@ -142,7 +142,6 @@ export default function App() {
                     intCorn,
                     intFox
                   );
-                  console.log(costResult, routeResult);
                   setCostRows(() => [costResult]);
                   setRouteRows(() => [routeResult]);
                 }
@@ -161,8 +160,7 @@ export default function App() {
           <Table data={costRows} cost />
         </div>
         <div className={classes.paper}>
-          
-          
+          <List data={routeRows} />
         </div>
       </Grid>
     </Grid>
