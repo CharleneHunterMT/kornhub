@@ -39,5 +39,14 @@ export default (geese = 0, corn = 0, fox = 0) => {
     totalArray.push(cornArray);
   }
 
+  if ((!geese || geese === 0) && (!corn || corn === 0) && fox > 0) {
+    let foxArray = [];
+    for (let i = 0; i < fox - 1; i++) {
+      foxArray.push("F", "");
+    }
+    foxArray.push("F");
+    totalArray.push(foxArray);
+  }
+
   return totalArray;
 };

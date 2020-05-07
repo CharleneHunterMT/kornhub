@@ -38,3 +38,11 @@ test("given one goose and two corn, the farmer is shown one route with seven tri
 test("given two goose and one corn, the farmer is shown one route seven trips", () => {
   expect(doTripCalculation(2, 1)).toEqual([["C", "", "G", "C", "G", "", "C"]]);
 });
+
+test("given one fox, the farmer is shown one route with one trip", () => {
+  expect(doTripCalculation(0, 0, 1)).toEqual([["F"]]);
+});
+
+test("given several foxes, the farmer is shown one route with several fox trips", () => {
+  expect(doTripCalculation(0, 0, 3)).toEqual([["F", "", "F", "", "F"]]);
+});
