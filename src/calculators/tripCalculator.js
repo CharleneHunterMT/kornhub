@@ -5,7 +5,7 @@ let oneGeeseOneCornOneFox2 = ["G", "", "C", "G", "F", "", "G"];
 let oneGeeseOneCorn = ["G", "", "C"];
 let oneCornOneGeese = ["C", "", "G"];
 
-export default (geese, corn) => {
+export default (geese = 0, corn = 0, fox = 0) => {
   let totalArray = [];
 
   if (geese === 1 && corn === 1) {
