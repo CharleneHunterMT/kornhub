@@ -6,6 +6,7 @@ let oneGeeseOneCorn = ["G", "", "C"];
 let oneCornOneGeese = ["C", "", "G"];
 
 export default (geese, corn) => {
+
   if (!corn && !geese) {
     return 0;
   }

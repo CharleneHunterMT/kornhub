@@ -116,8 +116,8 @@ export default function App() {
                 isNaN(intGeese) ? setGeeseError(true) : setGeeseError(false);
                 if (!(cornError || geeseError)) {
                   let [costResult, routeResult] = mockCalculateJourney(
-                    corn,
-                    geese
+                    intGeese,
+                    intCorn
                   );
                   console.log(costResult, routeResult);
                   setCostRows((costRows) => [...costRows, costResult]);
