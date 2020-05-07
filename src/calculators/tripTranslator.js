@@ -2,6 +2,7 @@ export default (trip) => {
   let result = [];
 
   if (!trip) {
+    result.push("No suitable routes found.");
     return result;
   }
 
@@ -25,6 +26,10 @@ export default (trip) => {
     let concatenatedTripDescription = prefix + itemWeAreCarrying + suffix;
 
     result.push(concatenatedTripDescription);
+  }
+
+  if (trip.length == 0) {
+    result.push("No suitable routes found.");
   }
 
   return result;
